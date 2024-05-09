@@ -5,7 +5,7 @@ import List from './components/List'; // Importa el componente List desde './com
 
 export default function App() { // Exporta la función App
   return (
-    <View style={styles.container}> // Devuelve un componente View con el estilo definido en 'styles.container'
+    <View style={styles.container}> 
       <SWRConfig
         value={{
           refreshInterval: 0, // Establece el intervalo de refresco en 0
@@ -13,9 +13,9 @@ export default function App() { // Exporta la función App
           suspense: true, // Activa el modo suspense
         }}
       >
-        <Text style={styles.title}>People</Text> // Muestra el texto 'People' con el estilo definido en 'styles.title'
-        <Suspense fallback={<Text style={styles.title}>Loading</Text>}> // Muestra el componente Suspense con un fallback de texto 'Loading' y estilo definido en 'styles.title'
-          <List /> // Muestra el componente List
+        <Text style={styles.title}>CONEXY</Text> 
+        <Suspense fallback={<Text style={styles.text}>Loading</Text>}> 
+          <List />
         </Suspense>
       </SWRConfig>
     </View>
@@ -29,9 +29,18 @@ const styles = StyleSheet.create({ // Define los estilos utilizando StyleSheet
     marginTop: 70, // Margen superior de 70
     textAlign: 'center', // Alineación centrada
     marginBottom: 30, // Margen inferior de 30
+    color: '#F5f5f5', // Rojo Coral
   },
   container: {
     flex: 1, // Flexibilidad de 1
-    backgroundColor: '#FFF7E9' // Color de fondo '#FFF7E9'
+    backgroundColor: '#70C1B3' // Verde Azulado
+  },
+  text:{
+    justifyContent:"center",
+    fontSize: 40, 
+    fontWeight: 'bold', 
+    textAlign: 'center', 
+    marginVertical:"50%",
+    color: '#FFD166' // Amarillo Soleado
   }
 });
